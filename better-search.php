@@ -128,7 +128,9 @@ if ( is_admin() ) {
 	require_once BETTER_SEARCH_PLUGIN_DIR . 'includes/admin/admin-dashboard.php';
 	require_once BETTER_SEARCH_PLUGIN_DIR . 'includes/admin/class-better-search-statistics.php';
 	require_once BETTER_SEARCH_PLUGIN_DIR . 'includes/admin/class-better-search-statistics-table.php';
-
+	if ( is_multisite() ) {
+		require_once BETTER_SEARCH_PLUGIN_DIR . 'includes/admin/class-better-search-network-admin.php';
+	}
 }
 
 
